@@ -1,0 +1,610 @@
+[
+    {
+        "first_name": "Emma",
+        "last_name": "Smith",
+        "email": "emma.smith@example.com",
+        "class": "10A",
+        "subject": "Mathematics",
+        "id": 1
+    },
+    {
+        "first_name": "Liam",
+        "last_name": "Johnson",
+        "email": "liam.johnson@example.com",
+        "class": "10B",
+        "subject": "Biology",
+        "id": 2
+    },
+    {
+        "first_name": "Olivia",
+        "last_name": "Williams",
+        "email": "olivia.williams@example.com",
+        "class": "10C",
+        "subject": "English Literature",
+        "id": 3
+    },
+    {
+        "first_name": "Noah",
+        "last_name": "Jones",
+        "email": "noah.jones@example.com",
+        "class": "11A",
+        "subject": "World History",
+        "id": 4
+    },
+    {
+        "first_name": "Ava",
+        "last_name": "Brown",
+        "email": "ava.brown@example.com",
+        "class": "11B",
+        "subject": "Geography",
+        "id": 5
+    },
+    {
+        "first_name": "Isabella",
+        "last_name": "Davis",
+        "email": "isabella.davis@example.com",
+        "class": "12A",
+        "subject": "Visual Arts",
+        "id": 6
+    },
+    {
+        "first_name": "Mason",
+        "last_name": "Miller",
+        "email": "mason.miller@example.com",
+        "class": "12B",
+        "subject": "Music Theory",
+        "id": 7
+    },
+    {
+        "first_name": "Sophia",
+        "last_name": "Wilson",
+        "email": "sophia.wilson@example.com",
+        "class": "Physics 808",
+        "subject": "Physics",
+        "id": 8
+    },
+    {
+        "first_name": "Jackson",
+        "last_name": "Moore",
+        "email": "jackson.moore@example.com",
+        "class": "Chemistry 909",
+        "subject": "Chemistry",
+        "id": 9
+    },
+    {
+        "first_name": "Mia",
+        "last_name": "Taylor",
+        "email": "mia.taylor@example.com",
+        "class": "Computer Science 1010",
+        "subject": "Computer Science",
+        "id": 10
+    },
+    {
+        "first_name": "Ethan",
+        "last_name": "Anderson",
+        "email": "ethan.anderson@example.com",
+        "class": "Physical Education 1111",
+        "subject": "Physical Education",
+        "id": 11
+    },
+    {
+        "first_name": "Charlotte",
+        "last_name": "Thomas",
+        "email": "charlotte.thomas@example.com",
+        "class": "French 1212",
+        "subject": "French Language",
+        "id": 12
+    },
+    {
+        "first_name": "James",
+        "last_name": "Jackson",
+        "email": "james.jackson@example.com",
+        "class": "Spanish 1313",
+        "subject": "Spanish Language",
+        "id": 13
+    },
+    {
+        "first_name": "Amelia",
+        "last_name": "White",
+        "email": "amelia.white@example.com",
+        "class": "Biology 1414",
+        "subject": "Biology",
+        "id": 14
+    },
+    {
+        "first_name": "Benjamin",
+        "last_name": "Harris",
+        "email": "benjamin.harris@example.com",
+        "class": "Math 1515",
+        "subject": "Mathematics",
+        "id": 15
+    },
+    {
+        "first_name": "Avery",
+        "last_name": "Martin",
+        "email": "avery.martin@example.com",
+        "class": "History 1616",
+        "subject": "World History",
+        "id": 16
+    },
+    {
+        "first_name": "Lucas",
+        "last_name": "Thompson",
+        "email": "lucas.thompson@example.com",
+        "class": "Geography 1717",
+        "subject": "Geography",
+        "id": 17
+    },
+    {
+        "first_name": "Harper",
+        "last_name": "Garcia",
+        "email": "harper.garcia@example.com",
+        "class": "English 1818",
+        "subject": "English Literature",
+        "id": 18
+    },
+    {
+        "first_name": "Sebastian",
+        "last_name": "Martinez",
+        "email": "sebastian.martinez@example.com",
+        "class": "Art 1919",
+        "subject": "Visual Arts",
+        "id": 19
+    },
+    {
+        "first_name": "Evelyn",
+        "last_name": "Robinson",
+        "email": "evelyn.robinson@example.com",
+        "class": "Music 2020",
+        "subject": "Music Theory",
+        "id": 20
+    },
+    {
+        "first_name": "Daniel",
+        "last_name": "Clark",
+        "email": "daniel.clark@example.com",
+        "class": "Physics 2121",
+        "subject": "Physics",
+        "id": 21
+    },
+    {
+        "first_name": "Ella",
+        "last_name": "Rodriguez",
+        "email": "ella.rodriguez@example.com",
+        "class": "Chemistry 2222",
+        "subject": "Chemistry",
+        "id": 22
+    },
+    {
+        "first_name": "Henry",
+        "last_name": "Lewis",
+        "email": "henry.lewis@example.com",
+        "class": "Computer Science 2323",
+        "subject": "Computer Science",
+        "id": 23
+    },
+    {
+        "first_name": "Grace",
+        "last_name": "Lee",
+        "email": "grace.lee@example.com",
+        "class": "Physical Education 2424",
+        "subject": "Physical Education",
+        "id": 24
+    },
+    {
+        "first_name": "Samuel",
+        "last_name": "Walker",
+        "email": "samuel.walker@example.com",
+        "class": "French 2525",
+        "subject": "French Language",
+        "id": 25
+    },
+    {
+        "first_name": "Chloe",
+        "last_name": "Hall",
+        "email": "chloe.hall@example.com",
+        "class": "Spanish 2626",
+        "subject": "Spanish Language",
+        "id": 26
+    },
+    {
+        "first_name": "Jackson",
+        "last_name": "Allen",
+        "email": "jackson.allen@example.com",
+        "class": "Biology 2727",
+        "subject": "Biology",
+        "id": 27
+    },
+    {
+        "first_name": "Zoe",
+        "last_name": "Young",
+        "email": "zoe.young@example.com",
+        "class": "Math 2828",
+        "subject": "Mathematics",
+        "id": 28
+    },
+    {
+        "first_name": "William",
+        "last_name": "Hernandez",
+        "email": "william.hernandez@example.com",
+        "class": "History 2929",
+        "subject": "World History",
+        "id": 29
+    },
+    {
+        "first_name": "Lily",
+        "last_name": "King",
+        "email": "lily.king@example.com",
+        "class": "Geography 3030",
+        "subject": "Geography",
+        "id": 30
+    },
+    {
+        "first_name": "Aiden",
+        "last_name": "Scott",
+        "email": "aiden.scott@example.com",
+        "class": "English 3131",
+        "subject": "English Literature",
+        "id": 31
+    },
+    {
+        "first_name": "Aria",
+        "last_name": "Adams",
+        "email": "aria.adams@example.com",
+        "class": "Art 3232",
+        "subject": "Visual Arts",
+        "id": 32
+    },
+    {
+        "first_name": "Gabriel",
+        "last_name": "Baker",
+        "email": "gabriel.baker@example.com",
+        "class": "Music 3333",
+        "subject": "Music Theory",
+        "id": 33
+    },
+    {
+        "first_name": "Hannah",
+        "last_name": "Gonzalez",
+        "email": "hannah.gonzalez@example.com",
+        "class": "Physics 3434",
+        "subject": "Physics",
+        "id": 34
+    },
+    {
+        "first_name": "Elijah",
+        "last_name": "Nelson",
+        "email": "elijah.nelson@example.com",
+        "class": "Chemistry 3535",
+        "subject": "Chemistry",
+        "id": 35
+    },
+    {
+        "first_name": "Sofia",
+        "last_name": "Carter",
+        "email": "sofia.carter@example.com",
+        "class": "Computer Science 3636",
+        "subject": "Computer Science",
+        "id": 36
+    },
+    {
+        "first_name": "Alexander",
+        "last_name": "Mitchell",
+        "email": "alexander.mitchell@example.com",
+        "class": "Physical Education 3737",
+        "subject": "Physical Education",
+        "id": 37
+    },
+    {
+        "first_name": "Ella",
+        "last_name": "Perez",
+        "email": "ella.perez@example.com",
+        "class": "French 3838",
+        "subject": "French Language",
+        "id": 38
+    },
+    {
+        "first_name": "James",
+        "last_name": "Roberts",
+        "email": "james.roberts@example.com",
+        "class": "Spanish 3939",
+        "subject": "Spanish Language",
+        "id": 39
+    },
+    {
+        "first_name": "Charlotte",
+        "last_name": "Turner",
+        "email": "charlotte.turner@example.com",
+        "class": "Biology 4040",
+        "subject": "Biology",
+        "id": 40
+    },
+    {
+        "first_name": "Ryan",
+        "last_name": "Phillips",
+        "email": "ryan.phillips@example.com",
+        "class": "Math 4141",
+        "subject": "Mathematics",
+        "id": 41
+    },
+    {
+        "first_name": "Mia",
+        "last_name": "Campbell",
+        "email": "mia.campbell@example.com",
+        "class": "History 4242",
+        "subject": "World History",
+        "id": 42
+    },
+    {
+        "first_name": "Lucas",
+        "last_name": "Parker",
+        "email": "lucas.parker@example.com",
+        "class": "Geography 4343",
+        "subject": "Geography",
+        "id": 43
+    },
+    {
+        "first_name": "Harper",
+        "last_name": "Evans",
+        "email": "harper.evans@example.com",
+        "class": "English 4444",
+        "subject": "English Literature",
+        "id": 44
+    },
+    {
+        "first_name": "Noah",
+        "last_name": "Collins",
+        "email": "noah.collins@example.com",
+        "class": "Art 4545",
+        "subject": "Visual Arts",
+        "id": 45
+    },
+    {
+        "first_name": "Lily",
+        "last_name": "Stewart",
+        "email": "lily.stewart@example.com",
+        "class": "Music 4646",
+        "subject": "Music Theory",
+        "id": 46
+    },
+    {
+        "first_name": "Ethan",
+        "last_name": "Morris",
+        "email": "ethan.morris@example.com",
+        "class": "Physics 4747",
+        "subject": "Physics",
+        "id": 47
+    },
+    {
+        "first_name": "Sofia",
+        "last_name": "Morris",
+        "email": "sofia.morris@example.com",
+        "class": "Chemistry 4848",
+        "subject": "Chemistry",
+        "id": 48
+    },
+    {
+        "first_name": "Aiden",
+        "last_name": "Mitchell",
+        "email": "aiden.mitchell@example.com",
+        "class": "Computer Science 4949",
+        "subject": "Computer Science",
+        "id": 49
+    },
+    {
+        "first_name": "Ella",
+        "last_name": "Miller",
+        "email": "ella.miller@example.com",
+        "class": "Physical Education 5050",
+        "subject": "Physical Education",
+        "id": 50
+    },
+    {
+        "first_name": "Sebastian",
+        "last_name": "Jackson",
+        "email": "sebastian.jackson@example.com",
+        "class": "French 5151",
+        "subject": "French Language",
+        "id": 51
+    },
+    {
+        "first_name": "Chloe",
+        "last_name": "White",
+        "email": "chloe.white@example.com",
+        "class": "Spanish 5252",
+        "subject": "Spanish Language",
+        "id": 52
+    },
+    {
+        "first_name": "Jackson",
+        "last_name": "Smith",
+        "email": "jackson.smith@example.com",
+        "class": "Biology 5353",
+        "subject": "Biology",
+        "id": 53
+    },
+    {
+        "first_name": "Mia",
+        "last_name": "Johnson",
+        "email": "mia.johnson@example.com",
+        "class": "Math 5454",
+        "subject": "Mathematics",
+        "id": 54
+    },
+    {
+        "first_name": "Avery",
+        "last_name": "Williams",
+        "email": "avery.williams@example.com",
+        "class": "History 5555",
+        "subject": "World History",
+        "id": 55
+    },
+    {
+        "first_name": "Lucas",
+        "last_name": "Jones",
+        "email": "lucas.jones@example.com",
+        "class": "Geography 5656",
+        "subject": "Geography",
+        "id": 56
+    },
+    {
+        "first_name": "Aria",
+        "last_name": "Brown",
+        "email": "aria.brown@example.com",
+        "class": "English 5757",
+        "subject": "English Literature",
+        "id": 57
+    },
+    {
+        "first_name": "Gabriel",
+        "last_name": "Davis",
+        "email": "gabriel.davis@example.com",
+        "class": "Art 5858",
+        "subject": "Visual Arts",
+        "id": 58
+    },
+    {
+        "first_name": "Hannah",
+        "last_name": "Miller",
+        "email": "hannah.miller@example.com",
+        "class": "Music 5959",
+        "subject": "Music Theory",
+        "id": 59
+    },
+    {
+        "first_name": "Daniel",
+        "last_name": "Wilson",
+        "email": "daniel.wilson@example.com",
+        "class": "Physics 6060",
+        "subject": "Physics",
+        "id": 60
+    },
+    {
+        "first_name": "Ella",
+        "last_name": "Moore",
+        "email": "ella.moore@example.com",
+        "class": "Chemistry 6161",
+        "subject": "Chemistry",
+        "id": 61
+    },
+    {
+        "first_name": "Henry",
+        "last_name": "Taylor",
+        "email": "henry.taylor@example.com",
+        "class": "Computer Science 6262",
+        "subject": "Computer Science",
+        "id": 62
+    },
+    {
+        "first_name": "Sofia",
+        "last_name": "Anderson",
+        "email": "sofia.anderson@example.com",
+        "class": "Physical Education 6363",
+        "subject": "Physical Education",
+        "id": 63
+    },
+    {
+        "first_name": "Alexander",
+        "last_name": "Thomas",
+        "email": "alexander.thomas@example.com",
+        "class": "French 6464",
+        "subject": "French Language",
+        "id": 64
+    },
+    {
+        "first_name": "Chloe",
+        "last_name": "Jackson",
+        "email": "chloe.jackson@example.com",
+        "class": "Spanish 6565",
+        "subject": "Spanish Language",
+        "id": 65
+    },
+    {
+        "first_name": "Jackson",
+        "last_name": "White",
+        "email": "jackson.white@example.com",
+        "class": "Biology 6666",
+        "subject": "Biology",
+        "id": 66
+    },
+    {
+        "first_name": "Lily",
+        "last_name": "Harris",
+        "email": "lily.harris@example.com",
+        "class": "Math 6767",
+        "subject": "Mathematics",
+        "id": 67
+    },
+    {
+        "first_name": "Ethan",
+        "last_name": "Martin",
+        "email": "ethan.martin@example.com",
+        "class": "History 6868",
+        "subject": "World History",
+        "id": 68
+    },
+    {
+        "first_name": "Mia",
+        "last_name": "Thompson",
+        "email": "mia.thompson@example.com",
+        "class": "Geography 6969",
+        "subject": "Geography",
+        "id": 69
+    },
+    {
+        "first_name": "Harper",
+        "last_name": "Roday",
+        "email": "harper.roday@example.com",
+        "class": "English 7070",
+        "subject": "English Literature",
+        "id": 70
+    },
+    {
+        "first_name": "Noah",
+        "last_name": "Martinez",
+        "email": "noah.martinez@example.com",
+        "class": "Art 7171",
+        "subject": "Visual Arts",
+        "id": 71
+    },
+    {
+        "first_name": "Evelyn",
+        "last_name": "Robins",
+        "email": "evelyn.robins@example.com",
+        "class": "Music 7272",
+        "subject": "Music Theory",
+        "id": 72
+    },
+    {
+        "first_name": "Liam",
+        "last_name": "Clark",
+        "email": "liam.clark@example.com",
+        "class": "Physics 7373",
+        "subject": "Physics",
+        "id": 73
+    },
+    {
+        "first_name": "Sophia",
+        "last_name": "Rodriguez",
+        "email": "sophia.rodriguez@example.com",
+        "class": "Chemistry 7474",
+        "subject": "Chemistry",
+        "id": 74
+    },
+    {
+        "first_name": "James",
+        "last_name": "Lewis",
+        "email": "james.lewis@example.com",
+        "class": "Computer Science 7575",
+        "subject": "Computer Science",
+        "id": 75
+    },
+    {
+        "first_name": "Grace",
+        "last_name": "Leanne",
+        "email": "grace.leanne@example.com",
+        "class": "Physical Education 7676",
+        "subject": "Physical Education",
+        "id": 76
+    }
+]
