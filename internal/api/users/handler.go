@@ -127,6 +127,7 @@ func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
 		// to spend the same time as the wrong-password path
 		_ = bcrypt.CompareHashAndPassword(dummyHash, []byte(req.Password))
 		auth.Unauthorize(w)
+		return
 	case err != nil:
 		http.Error(w, "internal server error", http.StatusInternalServerError)
 		return
@@ -134,12 +135,14 @@ func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
 	if !user.IsActive {
 		// "user is inactive" tells an attacker the account exists and is disabled
 		auth.Unauthorize(w)
+		return
 	}
 	if err := bcrypt.CompareHashAndPassword(
 		[]byte(user.PasswordHash),
 		[]byte(req.Password),
 	); err != nil {
 		auth.Unauthorize(w)
+		return
 	}
 
 	now := time.Now()
@@ -212,6 +215,7 @@ func (h *Handler) Refresh(w http.ResponseWriter, r *http.Request) {
 	switch {
 	case errors.Is(err, rt.ErrTokenNotFound):
 		auth.Unauthorize(w)
+		return
 	case err != nil:
 		log.Printf("refresh: get token: %v", err)
 		http.Error(w, "internal server error", http.StatusInternalServerError)
@@ -219,17 +223,21 @@ func (h *Handler) Refresh(w http.ResponseWriter, r *http.Request) {
 	}
 	if old.RevokedAt != nil {
 		auth.Unauthorize(w)
+		return
 	}
 	if now.After(old.ExpiresAt) {
 		auth.Unauthorize(w)
+		return
 	}
 
 	user, err := h.usersRepo.GetById(r.Context(), old.UserId)
 	if errors.Is(err, ErrUserNotFound) {
 		auth.Unauthorize(w)
+		return
 	}
 	if !user.IsActive {
 		auth.Unauthorize(w)
+		return
 	}
 	if err != nil {
 		log.Printf("refresh: getting user %d: %v", user.ID, err)
@@ -255,6 +263,7 @@ func (h *Handler) Refresh(w http.ResponseWriter, r *http.Request) {
 	})
 	if errors.Is(err, rt.ErrTokenAlreadyRevoked) {
 		auth.Unauthorize(w)
+		return
 	}
 	if err != nil {
 		log.Printf("refresh: rotate token %d: %v", old.Id, err)
