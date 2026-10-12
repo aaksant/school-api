@@ -1,4 +1,4 @@
-package teachingassignments
+package teaching_assignments
 
 type TeachingAssignment struct {
 	Id        int `json:"id"`
