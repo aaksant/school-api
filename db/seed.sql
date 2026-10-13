@@ -44,3 +44,8 @@ INSERT INTO class_student_mapping (student_id, class_id) VALUES
 (2, 1),
 (3, 2),
 (4, 3);
+
+INSERT INTO executives (first_name, last_name, email, title) VALUES
+('Maria', 'Harden', 'maria.harden@gmail.com', 'Principal'),
+('Daniel', 'Burton', 'danielb22@gmail.com', 'Vice Principal'),
+('Rina', 'Hartono', 'rinahartono1010@gmail.com', 'Head of Administration');
