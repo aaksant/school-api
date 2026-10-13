@@ -10,23 +10,6 @@ import (
 	"database/sql"
 )
 
-const assignStudentToClass = `-- name: AssignStudentToClass :exec
-INSERT INTO class_student_mapping (student_id, class_id)
-VALUES (?, ?)
-ON CONFLICT(student_id) DO UPDATE SET class_id = exlcuded.class_id
-`
-
-type AssignStudentToClassParams struct {
-	StudentID int64 `json:"student_id"`
-	ClassID   int64 `json:"class_id"`
-}
-
-// upsert
-func (q *Queries) AssignStudentToClass(ctx context.Context, arg AssignStudentToClassParams) error {
-	_, err := q.db.ExecContext(ctx, assignStudentToClass, arg.StudentID, arg.ClassID)
-	return err
-}
-
 const createTeacherAssignment = `-- name: CreateTeacherAssignment :one
 INSERT INTO teaching_assignments (class_id, subject_id, teacher_id)
 VALUES (?, ?, ?)
@@ -69,18 +52,6 @@ func (q *Queries) DeleteTeacherAssignment(ctx context.Context, id int64) (Teachi
 	return i, err
 }
 
-const getStudentMappingById = `-- name: GetStudentMappingById :one
-SELECT id, class_id, student_id FROM class_student_mapping
-WHERE id = ?
-`
-
-func (q *Queries) GetStudentMappingById(ctx context.Context, id int64) (ClassStudentMapping, error) {
-	row := q.db.QueryRowContext(ctx, getStudentMappingById, id)
-	var i ClassStudentMapping
-	err := row.Scan(&i.ID, &i.ClassID, &i.StudentID)
-	return i, err
-}
-
 const getTeachingAssignmentById = `-- name: GetTeachingAssignmentById :one
 SELECT id, class_id, subject_id, teacher_id FROM teaching_assignments
 WHERE id = ?
@@ -96,35 +67,6 @@ func (q *Queries) GetTeachingAssignmentById(ctx context.Context, id int64) (Teac
 		&i.TeacherID,
 	)
 	return i, err
-}
-
-const listStudentMappings = `-- name: ListStudentMappings :many
-SELECT id, class_id, student_id FROM class_student_mapping
-WHERE student_id = ?
-ORDER BY id
-`
-
-func (q *Queries) ListStudentMappings(ctx context.Context, studentID int64) ([]ClassStudentMapping, error) {
-	rows, err := q.db.QueryContext(ctx, listStudentMappings, studentID)
-	if err != nil {
-		return nil, err
-	}
-	defer rows.Close()
-	items := []ClassStudentMapping{}
-	for rows.Next() {
-		var i ClassStudentMapping
-		if err := rows.Scan(&i.ID, &i.ClassID, &i.StudentID); err != nil {
-			return nil, err
-		}
-		items = append(items, i)
-	}
-	if err := rows.Close(); err != nil {
-		return nil, err
-	}
-	if err := rows.Err(); err != nil {
-		return nil, err
-	}
-	return items, nil
 }
 
 const listTeachingAssignments = `-- name: ListTeachingAssignments :many
