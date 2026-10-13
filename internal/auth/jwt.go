@@ -90,6 +90,7 @@ func (tm *TokenManager) Verify(tokenString string) (*Claims, error) {
 		},
 		jwt.WithValidMethods([]string{"HS256"}), // skip alg check in keyFunc, enforce HS256
 		jwt.WithExpirationRequired(),
+		jwt.WithIssuer(tm.issuer),
 	)
 	if err != nil {
 		return nil, fmt.Errorf("failed to parse token: %w", err)
