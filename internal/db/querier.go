@@ -10,9 +10,8 @@ import (
 )
 
 type Querier interface {
-	// upsert
-	AssignStudentToClass(ctx context.Context, arg AssignStudentToClassParams) error
 	CreateClass(ctx context.Context, arg CreateClassParams) (Class, error)
+	CreateRefreshToken(ctx context.Context, arg CreateRefreshTokenParams) (RefreshToken, error)
 	// SELECT
 	//     s.id,
 	//     s.first_name,
@@ -29,18 +28,20 @@ type Querier interface {
 	CreateStudent(ctx context.Context, arg CreateStudentParams) (Student, error)
 	CreateTeacher(ctx context.Context, arg CreateTeacherParams) (Teacher, error)
 	CreateTeacherAssignment(ctx context.Context, arg CreateTeacherAssignmentParams) (TeachingAssignment, error)
+	CreateUser(ctx context.Context, arg CreateUserParams) (User, error)
 	DeleteClass(ctx context.Context, id int64) (Class, error)
 	DeleteStudent(ctx context.Context, id int64) (Student, error)
 	DeleteTeacher(ctx context.Context, id int64) (Teacher, error)
 	DeleteTeacherAssignment(ctx context.Context, id int64) (TeachingAssignment, error)
+	GetByEmail(ctx context.Context, email string) (User, error)
+	GetById(ctx context.Context, id int64) (User, error)
 	GetClass(ctx context.Context, id int64) (Class, error)
+	GetRefreshTokenByHash(ctx context.Context, tokenHash string) (RefreshToken, error)
 	GetStudent(ctx context.Context, id int64) (Student, error)
-	GetStudentMappingById(ctx context.Context, id int64) (ClassStudentMapping, error)
 	GetSubjectByName(ctx context.Context, name string) (Subject, error)
 	GetTeacher(ctx context.Context, id int64) (Teacher, error)
 	GetTeachingAssignmentById(ctx context.Context, id int64) (TeachingAssignment, error)
 	ListClasses(ctx context.Context) ([]Class, error)
-	ListStudentMappings(ctx context.Context, studentID int64) ([]ClassStudentMapping, error)
 	// SELECT
 	//     s.id,
 	//     s.first_name,
@@ -59,6 +60,8 @@ type Querier interface {
 	ListTeachers(ctx context.Context) ([]Teacher, error)
 	ListTeachingAssignments(ctx context.Context, teacherID int64) ([]TeachingAssignment, error)
 	RemoveStudentFromClass(ctx context.Context, studentID int64) (sql.Result, error)
+	RevokeAllRefreshTokensForUser(ctx context.Context, userID int64) error
+	RevokeRefreshToken(ctx context.Context, id int64) (int64, error)
 	UpdateClass(ctx context.Context, arg UpdateClassParams) (Class, error)
 	UpdateStudent(ctx context.Context, arg UpdateStudentParams) (Student, error)
 	UpdateTeacher(ctx context.Context, arg UpdateTeacherParams) (Teacher, error)
