@@ -7,15 +7,15 @@ import (
 )
 
 func (h *Handler) RegisterRoutes(mux *http.ServeMux, tm *auth.TokenManager) {
-	permittedRoles := []auth.Role{auth.RoleExecutive, auth.RoleTeacher}
+	read := []auth.Role{auth.RoleExecutive, auth.RoleTeacher}
 
 	mux.Handle("GET /teachers/{teacherId}/assignments", tm.Protect(
 		http.HandlerFunc(h.List),
-		permittedRoles...,
+		read...,
 	))
 	mux.Handle("GET /teachers/{teacherId}/assignments/{id}", tm.Protect(
 		http.HandlerFunc(h.GetById),
-		permittedRoles...,
+		read...,
 	))
 	mux.Handle("POST /teachers/{teacherId}/assignments", tm.Protect(
 		http.HandlerFunc(h.Create),
