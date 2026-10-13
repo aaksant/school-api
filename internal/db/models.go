@@ -19,23 +19,32 @@ type ClassStudentMapping struct {
 }
 
 type Executive struct {
+	ID        int64  `json:"id"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Email     string `json:"email"`
+	Title     string `json:"title"`
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
+}
+
+type RefreshToken struct {
 	ID        int64   `json:"id"`
-	FirstName string  `json:"first_name"`
-	LastName  string  `json:"last_name"`
-	Email     string  `json:"email"`
-	Title     *string `json:"title"`
+	UserID    int64   `json:"user_id"`
+	TokenHash string  `json:"token_hash"`
+	ExpiresAt string  `json:"expires_at"`
+	RevokedAt *string `json:"revoked_at"`
 	CreatedAt string  `json:"created_at"`
-	UpdatedAt string  `json:"updated_at"`
 }
 
 type Staff struct {
-	ID        int64   `json:"id"`
-	FirstName string  `json:"first_name"`
-	LastName  string  `json:"last_name"`
-	Email     string  `json:"email"`
-	Position  *string `json:"position"`
-	CreatedAt string  `json:"created_at"`
-	UpdatedAt string  `json:"updated_at"`
+	ID        int64  `json:"id"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Email     string `json:"email"`
+	Position  string `json:"position"`
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
 }
 
 type Student struct {
@@ -73,10 +82,15 @@ type TeachingAssignment struct {
 }
 
 type User struct {
-	ID        int64  `json:"id"`
-	PersonID  *int64 `json:"person_id"`
-	Role      string `json:"role"`
-	IsActive  int64  `json:"is_active"`
-	CreatedAt string `json:"created_at"`
-	UpdatedAt string `json:"updated_at"`
+	ID           int64  `json:"id"`
+	Email        string `json:"email"`
+	PasswordHash string `json:"password_hash"`
+	StudentID    *int64 `json:"student_id"`
+	TeacherID    *int64 `json:"teacher_id"`
+	StaffID      *int64 `json:"staff_id"`
+	ExecutiveID  *int64 `json:"executive_id"`
+	Role         string `json:"role"`
+	IsActive     int64  `json:"is_active"`
+	CreatedAt    string `json:"created_at"`
+	UpdatedAt    string `json:"updated_at"`
 }
